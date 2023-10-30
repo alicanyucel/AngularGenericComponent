@@ -1,0 +1,16 @@
+<ng-template #tfoot></ng-template>
+<table style="width: 100%;border: 1px solid #ccc;">
+    <thead style="background-color: #ccc; text-align: left;"> 
+        <tr>
+            <th *ngFor="let head of headers">
+                {{head}}
+           </th>
+        </tr>
+    </thead>
+    <tbody>
+        <ng-content></ng-content>
+    </tbody>
+    <tfoot>
+   <ng-container *ngTemplateOutlet="tfoot"></ng-container>
+    </tfoot>
+</table>
